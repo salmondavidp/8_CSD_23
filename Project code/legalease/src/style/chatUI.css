@@ -1,0 +1,175 @@
+/* chatUI.css */
+
+.chat-container {
+    display: flex;
+    height: 90vh; /* Make sure the container takes up full viewport height */
+    font-family: sans-serif; /* Use a clean, modern font */
+    background-color: #f4f4f4; /* Light background */
+    border-radius: 10px;
+  }
+  
+  .chat-sidebar {
+    width: 300px; /* Adjust sidebar width as needed */
+    background-color: #fff; /* White sidebar */
+    border-right: 1px solid #ddd; /* Subtle border */
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column; /* Align elements vertically */
+  }
+  
+  .chat-sidebar h2 {
+    margin-bottom: 10px;
+    color: #333; /* Darker heading color */
+  }
+  
+  .api-key-input input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Prevent padding from affecting width */
+  }
+  
+  .model-select {
+    margin-bottom: 10px;
+  }
+  
+  .model-select label {
+    display: block; /* Place label above select */
+    margin-bottom: 5px;
+    color: #555;
+  }
+  
+  .model-select select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  .new-chat-btn {
+    background-color: #4285f4; /* Google blue */
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    transition: background-color 0.3s; /* Smooth transition on hover */
+  }
+  
+  .new-chat-btn:hover {
+    background-color: #357ae8; /* Darker blue on hover */
+  }
+  
+  
+  .history-list {
+    overflow-y: auto; /* Make the history list scrollable */
+    flex-grow: 1; /* Allow the history list to take up available space */
+  }
+  
+  .history-item {
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+    display: flex;
+    align-items: center;  /* Align items vertically */
+    justify-content: space-between; /* Distribute space between title and delete button */
+    transition: background-color 0.2s;
+  }
+  
+  .history-item:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .delete-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #888; /* Gray color for delete icon */
+    padding: 0; /* Remove default button padding */
+  }
+  
+  .delete-btn:hover {
+    color: #333; /* Darker color on hover */
+  }
+  
+  .chat-main {
+    flex-grow: 1; /* Allow chat main to take up remaining space */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .chat-messages {
+    flex-grow: 1;
+    overflow-y: auto;
+    padding-bottom: 20px;
+  }
+  
+  .message {
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    max-width: 80%; /* Prevent messages from taking up full width */
+    clear: both; /* Clear floats so messages stack correctly */
+  }
+  
+  .message.user {
+    background-color: #e1f0c4; /* Light green for user */
+    float: right; /* Align user messages to the right */
+    margin-left: 20%; /* Add margin to separate from AI messages */
+  }
+  
+  .message.ai {
+    background-color: #fff; /* White for AI */
+    float: left; /* Align AI messages to the left */
+    margin-right: 20%; /* Add margin to separate from User messages */
+  }
+  
+  .chat-input {
+    display: flex;
+    align-items: center; /* Vertically center input and button */
+    border-top: 1px solid #ddd;
+    padding-top: 10px;
+  }
+  
+  .chat-input input {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-right: 10px;
+    box-sizing: border-box;
+  }
+  
+  .chat-input button {
+    background-color: #4285f4; /* Google blue */
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .chat-input button:hover {
+    background-color: #357ae8;
+  }
+  
+  /* Responsive adjustments (example) */
+  @media (max-width: 768px) {
+    .chat-container {
+      flex-direction: column; /* Stack sidebar and main on smaller screens */
+    }
+    .chat-sidebar {
+      width: 100%; /* Sidebar takes full width */
+      height: auto; /* Allow sidebar height to adjust */
+    }
+    .chat-main {
+      padding: 10px; /* Reduce padding on smaller screens */
+    }
+  }
