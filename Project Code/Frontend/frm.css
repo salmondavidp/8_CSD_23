@@ -1,0 +1,221 @@
+/* General layout and background */
+.p-6 {
+    padding: 2rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f6f8;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* General form styling */
+.space-y-3 {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin: 20px 0;
+    width: 100%;
+  
+}
+
+.form-container label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.space-y-3 input,
+.form-container select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.space-y-3 input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #e0e6ed;
+    border-radius: 0.25rem;
+    font-size: 1rem;
+    box-sizing: border-box;
+    transition: border-color 0.2s ease-in-out;
+}
+
+.space-y-3 input:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 0.25rem rgba(0, 123, 255, 0.25);
+}
+
+/* Heading */
+.text-2xl {
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+/* Add Condition area */
+.mb-4 {
+    margin-bottom: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 100%;
+   
+}
+
+.mb-4 input[type="text"] {
+    flex-grow: 1;
+    padding: 0.75rem;
+    border: 1px solid #e0e6ed;
+    border-radius: 0.25rem;
+    font-size: 1rem;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+/* Buttons */
+.bg-blue-500, .bg-green-500, .bg-red-500 {
+    background-color: #007bff;
+    color: #fff;
+    padding: 0.75rem 1.25rem;
+    border: none;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.2s ease-in-out;
+    font-size: 1rem;
+    width: auto;
+}
+
+.bg-green-500 {
+    background-color: #28a745;
+}
+
+.bg-red-500 {
+    background-color: #dc3545;
+}
+
+.bg-blue-500:hover, .bg-green-500:hover, .bg-red-500:hover {
+    filter: brightness(90%);
+}
+
+.mt-5 {
+    margin-top: 1.25rem;
+    max-width: 900px;
+    width: 100%;
+}
+
+/* Preview container */
+.mt-8 {
+    margin-top: 2rem;
+    max-width: 900px;
+    width: 100%;
+    padding: 1.5rem;
+    border: 1px solid #ced4da;
+    border-radius: 0.5rem;
+    background-color: #fff;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.05);
+    box-sizing: border-box;
+}
+
+.mt-8 h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.mt-8 h3 {
+    font-size: 1.125rem;
+    font-weight: 500;
+    color: #555;
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+}
+
+.mt-8 p {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 0.75rem;
+    font-size: 1rem;
+}
+
+.mt-8 strong {
+    font-weight: 600;
+    color: #333;
+}
+
+/* Drag and Drop Styling */
+.mb-4 ul {
+    list-style: none;
+    padding: 0.5rem;
+    margin: 0;
+    border: 1px solid #e0e6ed;
+    border-radius: 0.25rem;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.mb-4 li {
+    display: flex;
+    align-items: center;
+    border: 1px solid #e0e6ed;
+    border-radius: 0.25rem;
+    padding: 0.5rem;
+    margin-bottom: 0.25rem;
+    background-color: #fff;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.08);
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.mb-4 li:last-child {
+    margin-bottom: 0;
+}
+
+.mb-4 li > span.cursor-grab {
+    cursor: grab;
+    margin-right: 0.5rem;
+    color: #777;
+    user-select: none; /* Add this line */
+}
+
+.mb-4 li input[type="text"] {
+    flex-grow: 1;
+    border: none;
+    padding: 0.4rem;
+    font-size: 0.9rem;
+    border-radius: 0.25rem;
+    margin-right: 0.5rem;
+    background-color: #f8f9fa;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.mb-4 li input[type="text"]:focus {
+    outline: none;
+    border: 1px solid #007bff;
+    box-shadow: 0 0 0.125rem rgba(0, 123, 255, 0.25);
+}
+
+.mb-4 li button {
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    border-radius: 0.25rem;
+    padding: 0.3rem 0.6rem;
+    cursor: pointer;
+    font-size: 0.8rem;
+    transition: background-color 0.2s ease-in-out;
+    width: auto;
+}
+
+.mb-4 li button:hover {
+    filter: brightness(90%);
+}
